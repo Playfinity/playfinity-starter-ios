@@ -1,2 +1,2 @@
-# trampo-ios
-Trampoline game for iOS
+# playfinity-starter-ios
+Playfinity template project for iOS
