@@ -1,0 +1,386 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		80DEF0A92161013500A2E3F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80DEF0A82161013500A2E3F8 /* AppDelegate.swift */; };
+		80DEF0AB2161013500A2E3F8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80DEF0AA2161013500A2E3F8 /* ViewController.swift */; };
+		80DEF0AE2161013500A2E3F8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80DEF0AC2161013500A2E3F8 /* Main.storyboard */; };
+		80DEF0B02161013700A2E3F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80DEF0AF2161013700A2E3F8 /* Assets.xcassets */; };
+		80DEF0B32161013700A2E3F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80DEF0B12161013700A2E3F8 /* LaunchScreen.storyboard */; };
+		80DEF0C221610E6500A2E3F8 /* throw.wav in Resources */ = {isa = PBXBuildFile; fileRef = 80DEF0C121610E6500A2E3F8 /* throw.wav */; };
+		80DEF0C421610E8100A2E3F8 /* catch.wav in Resources */ = {isa = PBXBuildFile; fileRef = 80DEF0C321610E8100A2E3F8 /* catch.wav */; };
+		80DEF0C62161137400A2E3F8 /* puffin_sdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80DEF0C52161137400A2E3F8 /* puffin_sdk.framework */; };
+		80DEF0C72161137400A2E3F8 /* puffin_sdk.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 80DEF0C52161137400A2E3F8 /* puffin_sdk.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		80DEF0BD2161017400A2E3F8 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				80DEF0C72161137400A2E3F8 /* puffin_sdk.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		80DEF0A52161013500A2E3F8 /* Playfinity Recorder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Playfinity Recorder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		80DEF0A82161013500A2E3F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		80DEF0AA2161013500A2E3F8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		80DEF0AD2161013500A2E3F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		80DEF0AF2161013700A2E3F8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		80DEF0B22161013700A2E3F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		80DEF0B42161013700A2E3F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		80DEF0C121610E6500A2E3F8 /* throw.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = throw.wav; sourceTree = "<group>"; };
+		80DEF0C321610E8100A2E3F8 /* catch.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = catch.wav; sourceTree = "<group>"; };
+		80DEF0C52161137400A2E3F8 /* puffin_sdk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = puffin_sdk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		80DEF0A22161013500A2E3F8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				80DEF0C62161137400A2E3F8 /* puffin_sdk.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		80DEF09C2161013500A2E3F8 = {
+			isa = PBXGroup;
+			children = (
+				80DEF0C52161137400A2E3F8 /* puffin_sdk.framework */,
+				80DEF0A72161013500A2E3F8 /* Playfinity Recorder */,
+				80DEF0A62161013500A2E3F8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		80DEF0A62161013500A2E3F8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				80DEF0A52161013500A2E3F8 /* Playfinity Recorder.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		80DEF0A72161013500A2E3F8 /* Playfinity Recorder */ = {
+			isa = PBXGroup;
+			children = (
+				80DEF0BE21610E4600A2E3F8 /* sounds */,
+				80DEF0A82161013500A2E3F8 /* AppDelegate.swift */,
+				80DEF0AA2161013500A2E3F8 /* ViewController.swift */,
+				80DEF0AC2161013500A2E3F8 /* Main.storyboard */,
+				80DEF0AF2161013700A2E3F8 /* Assets.xcassets */,
+				80DEF0B12161013700A2E3F8 /* LaunchScreen.storyboard */,
+				80DEF0B42161013700A2E3F8 /* Info.plist */,
+			);
+			path = "Playfinity Recorder";
+			sourceTree = "<group>";
+		};
+		80DEF0BE21610E4600A2E3F8 /* sounds */ = {
+			isa = PBXGroup;
+			children = (
+				80DEF0C321610E8100A2E3F8 /* catch.wav */,
+				80DEF0C121610E6500A2E3F8 /* throw.wav */,
+			);
+			path = sounds;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		80DEF0A42161013500A2E3F8 /* Playfinity Recorder */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 80DEF0B72161013700A2E3F8 /* Build configuration list for PBXNativeTarget "Playfinity Recorder" */;
+			buildPhases = (
+				80DEF0A12161013500A2E3F8 /* Sources */,
+				80DEF0A22161013500A2E3F8 /* Frameworks */,
+				80DEF0A32161013500A2E3F8 /* Resources */,
+				80DEF0BD2161017400A2E3F8 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Playfinity Recorder";
+			productName = "Playfinity Recorder";
+			productReference = 80DEF0A52161013500A2E3F8 /* Playfinity Recorder.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		80DEF09D2161013500A2E3F8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1000;
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = "Stian Vælitalo";
+				TargetAttributes = {
+					80DEF0A42161013500A2E3F8 = {
+						CreatedOnToolsVersion = 10.0;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = 80DEF0A02161013500A2E3F8 /* Build configuration list for PBXProject "Playfinity Recorder" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 80DEF09C2161013500A2E3F8;
+			productRefGroup = 80DEF0A62161013500A2E3F8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				80DEF0A42161013500A2E3F8 /* Playfinity Recorder */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		80DEF0A32161013500A2E3F8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				80DEF0B32161013700A2E3F8 /* LaunchScreen.storyboard in Resources */,
+				80DEF0B02161013700A2E3F8 /* Assets.xcassets in Resources */,
+				80DEF0AE2161013500A2E3F8 /* Main.storyboard in Resources */,
+				80DEF0C221610E6500A2E3F8 /* throw.wav in Resources */,
+				80DEF0C421610E8100A2E3F8 /* catch.wav in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		80DEF0A12161013500A2E3F8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				80DEF0AB2161013500A2E3F8 /* ViewController.swift in Sources */,
+				80DEF0A92161013500A2E3F8 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		80DEF0AC2161013500A2E3F8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				80DEF0AD2161013500A2E3F8 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		80DEF0B12161013700A2E3F8 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				80DEF0B22161013700A2E3F8 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		80DEF0B52161013700A2E3F8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		80DEF0B62161013700A2E3F8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		80DEF0B82161013700A2E3F8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K4LRZ83GUN;
+				INFOPLIST_FILE = "Playfinity Recorder/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = register.before.production;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		80DEF0B92161013700A2E3F8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K4LRZ83GUN;
+				INFOPLIST_FILE = "Playfinity Recorder/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = register.before.production;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		80DEF0A02161013500A2E3F8 /* Build configuration list for PBXProject "Playfinity Recorder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				80DEF0B52161013700A2E3F8 /* Debug */,
+				80DEF0B62161013700A2E3F8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		80DEF0B72161013700A2E3F8 /* Build configuration list for PBXNativeTarget "Playfinity Recorder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				80DEF0B82161013700A2E3F8 /* Debug */,
+				80DEF0B92161013700A2E3F8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 80DEF09D2161013500A2E3F8 /* Project object */;
+}
