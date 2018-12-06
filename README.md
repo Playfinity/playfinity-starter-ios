@@ -9,11 +9,11 @@ At Playfinity, we make:
 - our own game console (sensor chip) that can be put into various things
 - a throwing ball (Ø 10 cm), a PU ball that you can put the game console inside
 - games built on our own SDK, for iOS and Android:
--- High5 ball throwing app
--- Trix football freestyle app
--- Trampoline app where you put the game console in your pocket
+  - High5 ball throwing app
+  - Trix football freestyle app
+  - Trampoline app where you put the game console in your pocket
 
-Check out videos on our website to see in-action footage.
+Check out videos on our [website](https://playfinity.io) to see in-action footage.
 
 ## The SDK
 
@@ -25,13 +25,42 @@ When you write your app, you define in which mode you shall use the console:
 - Freestyle football
 - Trampoline
 
+```swift
+// Register at labs@playfinity.io
+let devId = "SAMPLE_TEST"
+let appId = "SAMPLE_TEST"
+
+let conf = PFIConfiguration.init(applicationKey: appId, developerId: devId, sensorType: SensorType.ball)
+```
+
 You can also subscribe to raw data to receive un-touched data from the console at 50 samples per second.
+```swift
+sdk.connect(to: console, completion: { (error) in
+	if let e = error {
+		print("ERROR: Failed to connect: \(e)")
+    return
+	} 
+  if let c = console {
+		print("Connected")
+    c.setPureDataSubscriber(sub: self, code: "451C5EA6-4AD7-4B4A-BA23-4EF34AA7B392")
+	}
+})
+
+```
+
+Raw data is:
+- gyro x-y-z
+- accel x-y-z
+- compass x-y-z (soon)
+- baro
+- console clock (ticks)
+- events (subset of events)
 
 ## Ball events
 
 We have worked really hard to make your job as simple as possible.
 
-It all started with a ball you can throw. We have spent hundreds of hours recording data, analyzing them and implementing algorithms to detect events such as:
+It all started with a ball you can throw. We have spent "tons" of hours recording data, analyzing them and implementing algorithms to detect events such as:
 
 - ball throw
 - ball catch
@@ -46,8 +75,8 @@ We have also created events for trampoline:
 - jump
 - land on feet. We shall add land on back and land on front.
 - events have attached properties such as
--- jump height
--- jump rotation in degrees
+  - jump height
+  - jump rotation in degrees
 
 And we have created events for freestyle football:
 
@@ -57,7 +86,14 @@ And we have created events for freestyle football:
 - ball flight air-time
 - ball height
 
-All of this is available for you. You can focus on the game experience.
+In addition we have two push buttons that produce:
+
+- top button
+- top button release
+- side button
+- side button release
+
+All of this is available to you. You can focus on the game experience.
 
 ## Discovering the console
 
@@ -68,9 +104,9 @@ The console pairs simply by bringing it close to the phone. Maybe you need to pr
 ## Nice to know
 
 The sample app is equipped with a "test" developer- and app-identifier.
-So you can download, create and run your app on your devices.
+So you can download from this repository, modify and run your app on any of your devices.
 
-If you change the bundle identifier, you must register at Playfinity, since the "test" identifiers is bound to the bundle identifier shipped in this sample app.
+If you change the bundle identifier, you must register at Playfinity, since the "test" values for app and dev belongs to the bundle identifier shipped in this sample app.
 
 ### Register if you deploy to AppStore
 
