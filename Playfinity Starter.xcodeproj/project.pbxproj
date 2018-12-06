@@ -42,7 +42,7 @@
 		807500372184A54200F64BE6 /* playfinity_sdk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = playfinity_sdk.framework; sourceTree = "<group>"; };
 		8075003B2184A58600F64BE6 /* playfinity_sounds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = playfinity_sounds.framework; sourceTree = "<group>"; };
 		8085C22721B92F2500BEA34E /* Unbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Unbox.framework; path = Carthage/Build/iOS/Unbox.framework; sourceTree = "<group>"; };
-		80DEF0A52161013500A2E3F8 /* Playfinity Recorder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Playfinity Recorder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		80DEF0A52161013500A2E3F8 /* Playfinity Starter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Playfinity Starter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		80DEF0A82161013500A2E3F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		80DEF0AA2161013500A2E3F8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		80DEF0AD2161013500A2E3F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -73,7 +73,7 @@
 				8085C22721B92F2500BEA34E /* Unbox.framework */,
 				807500372184A54200F64BE6 /* playfinity_sdk.framework */,
 				8075003B2184A58600F64BE6 /* playfinity_sounds.framework */,
-				80DEF0A72161013500A2E3F8 /* Playfinity Recorder */,
+				80DEF0A72161013500A2E3F8 /* Playfinity Starter */,
 				80DEF0A62161013500A2E3F8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -81,12 +81,12 @@
 		80DEF0A62161013500A2E3F8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				80DEF0A52161013500A2E3F8 /* Playfinity Recorder.app */,
+				80DEF0A52161013500A2E3F8 /* Playfinity Starter.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		80DEF0A72161013500A2E3F8 /* Playfinity Recorder */ = {
+		80DEF0A72161013500A2E3F8 /* Playfinity Starter */ = {
 			isa = PBXGroup;
 			children = (
 				80DEF0BE21610E4600A2E3F8 /* sounds */,
@@ -97,7 +97,7 @@
 				80DEF0B12161013700A2E3F8 /* LaunchScreen.storyboard */,
 				80DEF0B42161013700A2E3F8 /* Info.plist */,
 			);
-			path = "Playfinity Recorder";
+			path = "Playfinity Starter";
 			sourceTree = "<group>";
 		};
 		80DEF0BE21610E4600A2E3F8 /* sounds */ = {
@@ -112,9 +112,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		80DEF0A42161013500A2E3F8 /* Playfinity Recorder */ = {
+		80DEF0A42161013500A2E3F8 /* Playfinity Starter */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 80DEF0B72161013700A2E3F8 /* Build configuration list for PBXNativeTarget "Playfinity Recorder" */;
+			buildConfigurationList = 80DEF0B72161013700A2E3F8 /* Build configuration list for PBXNativeTarget "Playfinity Starter" */;
 			buildPhases = (
 				80DEF0A12161013500A2E3F8 /* Sources */,
 				80DEF0A22161013500A2E3F8 /* Frameworks */,
@@ -125,9 +125,9 @@
 			);
 			dependencies = (
 			);
-			name = "Playfinity Recorder";
+			name = "Playfinity Starter";
 			productName = "Playfinity Recorder";
-			productReference = 80DEF0A52161013500A2E3F8 /* Playfinity Recorder.app */;
+			productReference = 80DEF0A52161013500A2E3F8 /* Playfinity Starter.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -150,7 +150,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 80DEF0A02161013500A2E3F8 /* Build configuration list for PBXProject "Playfinity Recorder" */;
+			buildConfigurationList = 80DEF0A02161013500A2E3F8 /* Build configuration list for PBXProject "Playfinity Starter" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -163,7 +163,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				80DEF0A42161013500A2E3F8 /* Playfinity Recorder */,
+				80DEF0A42161013500A2E3F8 /* Playfinity Starter */,
 			);
 		};
 /* End PBXProject section */
@@ -343,7 +343,7 @@
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = "Playfinity Recorder/Info.plist";
+				INFOPLIST_FILE = "Playfinity Starter/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -368,7 +368,7 @@
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = "Playfinity Recorder/Info.plist";
+				INFOPLIST_FILE = "Playfinity Starter/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -384,7 +384,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		80DEF0A02161013500A2E3F8 /* Build configuration list for PBXProject "Playfinity Recorder" */ = {
+		80DEF0A02161013500A2E3F8 /* Build configuration list for PBXProject "Playfinity Starter" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				80DEF0B52161013700A2E3F8 /* Debug */,
@@ -393,7 +393,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		80DEF0B72161013700A2E3F8 /* Build configuration list for PBXNativeTarget "Playfinity Recorder" */ = {
+		80DEF0B72161013700A2E3F8 /* Build configuration list for PBXNativeTarget "Playfinity Starter" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				80DEF0B82161013700A2E3F8 /* Debug */,
