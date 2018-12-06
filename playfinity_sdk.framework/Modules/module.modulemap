@@ -1,0 +1,11 @@
+framework module playfinity_sdk {
+  umbrella header "playfinity_sdk.h"
+
+  export *
+  module * { export * }
+}
+
+module playfinity_sdk.Swift {
+    header "playfinity_sdk-Swift.h"
+    requires objc
+}

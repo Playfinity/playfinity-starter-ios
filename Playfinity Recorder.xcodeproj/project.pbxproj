@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		807500382184A54200F64BE6 /* playfinity_sdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 807500372184A54200F64BE6 /* playfinity_sdk.framework */; };
+		8075003A2184A55100F64BE6 /* playfinity_sdk.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 807500372184A54200F64BE6 /* playfinity_sdk.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8075003C2184A58600F64BE6 /* playfinity_sounds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8075003B2184A58600F64BE6 /* playfinity_sounds.framework */; };
+		8075003E2184B20D00F64BE6 /* playfinity_sounds.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8075003B2184A58600F64BE6 /* playfinity_sounds.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8085C22821B92F2500BEA34E /* Unbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8085C22721B92F2500BEA34E /* Unbox.framework */; };
+		8085C22921B92F2500BEA34E /* Unbox.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8085C22721B92F2500BEA34E /* Unbox.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		80DEF0A92161013500A2E3F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80DEF0A82161013500A2E3F8 /* AppDelegate.swift */; };
 		80DEF0AB2161013500A2E3F8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80DEF0AA2161013500A2E3F8 /* ViewController.swift */; };
 		80DEF0AE2161013500A2E3F8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80DEF0AC2161013500A2E3F8 /* Main.storyboard */; };
@@ -14,8 +20,6 @@
 		80DEF0B32161013700A2E3F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80DEF0B12161013700A2E3F8 /* LaunchScreen.storyboard */; };
 		80DEF0C221610E6500A2E3F8 /* throw.wav in Resources */ = {isa = PBXBuildFile; fileRef = 80DEF0C121610E6500A2E3F8 /* throw.wav */; };
 		80DEF0C421610E8100A2E3F8 /* catch.wav in Resources */ = {isa = PBXBuildFile; fileRef = 80DEF0C321610E8100A2E3F8 /* catch.wav */; };
-		80DEF0C62161137400A2E3F8 /* puffin_sdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80DEF0C52161137400A2E3F8 /* puffin_sdk.framework */; };
-		80DEF0C72161137400A2E3F8 /* puffin_sdk.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 80DEF0C52161137400A2E3F8 /* puffin_sdk.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,7 +29,9 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				80DEF0C72161137400A2E3F8 /* puffin_sdk.framework in Embed Frameworks */,
+				8085C22921B92F2500BEA34E /* Unbox.framework in Embed Frameworks */,
+				8075003A2184A55100F64BE6 /* playfinity_sdk.framework in Embed Frameworks */,
+				8075003E2184B20D00F64BE6 /* playfinity_sounds.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -33,6 +39,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		807500372184A54200F64BE6 /* playfinity_sdk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = playfinity_sdk.framework; sourceTree = "<group>"; };
+		8075003B2184A58600F64BE6 /* playfinity_sounds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = playfinity_sounds.framework; sourceTree = "<group>"; };
+		8085C22721B92F2500BEA34E /* Unbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Unbox.framework; path = Carthage/Build/iOS/Unbox.framework; sourceTree = "<group>"; };
 		80DEF0A52161013500A2E3F8 /* Playfinity Recorder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Playfinity Recorder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		80DEF0A82161013500A2E3F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		80DEF0AA2161013500A2E3F8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -42,7 +51,6 @@
 		80DEF0B42161013700A2E3F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		80DEF0C121610E6500A2E3F8 /* throw.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = throw.wav; sourceTree = "<group>"; };
 		80DEF0C321610E8100A2E3F8 /* catch.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = catch.wav; sourceTree = "<group>"; };
-		80DEF0C52161137400A2E3F8 /* puffin_sdk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = puffin_sdk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,7 +58,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				80DEF0C62161137400A2E3F8 /* puffin_sdk.framework in Frameworks */,
+				8085C22821B92F2500BEA34E /* Unbox.framework in Frameworks */,
+				807500382184A54200F64BE6 /* playfinity_sdk.framework in Frameworks */,
+				8075003C2184A58600F64BE6 /* playfinity_sounds.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,7 +70,9 @@
 		80DEF09C2161013500A2E3F8 = {
 			isa = PBXGroup;
 			children = (
-				80DEF0C52161137400A2E3F8 /* puffin_sdk.framework */,
+				8085C22721B92F2500BEA34E /* Unbox.framework */,
+				807500372184A54200F64BE6 /* playfinity_sdk.framework */,
+				8075003B2184A58600F64BE6 /* playfinity_sounds.framework */,
 				80DEF0A72161013500A2E3F8 /* Playfinity Recorder */,
 				80DEF0A62161013500A2E3F8 /* Products */,
 			);
@@ -326,6 +338,11 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K4LRZ83GUN;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "Playfinity Recorder/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -346,6 +363,11 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K4LRZ83GUN;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "Playfinity Recorder/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

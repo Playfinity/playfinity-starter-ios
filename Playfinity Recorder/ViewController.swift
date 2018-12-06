@@ -7,11 +7,14 @@
 //
 
 import UIKit
-import puffin_sdk
+import playfinity_sdk
+import playfinity_sounds
 
 class ViewController: UIViewController {
 
 	@IBOutlet var infoButton: UIButton!
+	
+	var sdk: PlayfinitySDK?
 	
 	let throwsound = PlaySoundSettings.custom(file: "throw", ext: "wav", loop: false, volume: SoundsVolumeType.max, balance: SoundsPanType.center, willBlockPlaybackUntilFinished: false)
 	
@@ -27,7 +30,7 @@ class ViewController: UIViewController {
 						self.infoButton.setTitle("Ball is ready. Throw it!", for: UIControl.State.normal)
 					})
 					
-					PFISDKManager.shared?.soundsManager.play(settings: self.throwsound)
+					PFISoundsManager.shared.play(settings: self.throwsound)
 				}
 				
 				
@@ -37,7 +40,7 @@ class ViewController: UIViewController {
 						self.infoButton.setTitle("Ball is ready. Throw it!", for: UIControl.State.normal)
 					})
 					
-					PFISDKManager.shared?.soundsManager.play(settings: self.catchsound)
+					PFISoundsManager.shared.play(settings: self.catchsound)
 				}
 			})
 
@@ -53,41 +56,36 @@ class ViewController: UIViewController {
 		let appId = "SAMPLE_TEST"
 		// In addition, the app's bundle identifier must be registered with Playfinity server
 		
-		let conf = PFIConfiguration.init(applicationKey: appId, developerId: devId)
-		PFISDKManager.with(config: conf, completion: { (sdk, err) in
-			if let e = err {
+		let conf = PFIConfiguration.init(applicationKey: appId, developerId: devId, sensorType: SensorType.ball)
+		PlayfinitySDK.validate(config: conf) { (sdk, error) in
+			if let e = error {
 				NSLog("Framework not initialized: \(e)")
 				self.infoButton.setTitle("Framework initialization failed!", for: UIControl.State.normal)
 			} else {
 				NSLog("Framework successfully initialized")
-				self.infoButton.setTitle("Framework initialized", for: UIControl.State.normal)
+				self.infoButton.setTitle("But ball close to phone", for: UIControl.State.normal)
+				
+				self.sdk = sdk
 				
 				// Listening for console set up as ball
-				PFISDKManager.shared?.discover(types: SensorType.ball, delegate: self, forOad: false, clearCache: true)
+				self.sdk?.scanForSensors(completion: { (sensors, er) in
+					if let er = er {
+						NSLog("Failed scanning for sensors \(er)")
+					}
+					
+					for s in sensors {
+						NSLog("Found ball sensor \(s.givenName)")
+						if let ps = s as? PFIBallSensor, self.aBall == nil {
+							self.aBall = ps
+							self.infoButton.setTitle("Ball is ready. Throw it!", for: UIControl.State.normal)
+						}
+					}
+				})
 			}
-		})
+		}
 		
 		NSLog("View did load")
 	}
 
 
-}
-
-extension ViewController: SensorConfiguratorDelegate {
-	func didConfigure(sensor: Sensor) {
-		NSLog("Did configure sensor as ball: \(sensor.description())")
-		self.infoButton.setTitle("Ball is ready. Throw it!", for: UIControl.State.normal)
-		
-		if let ps = sensor as? PFIBallSensor, aBall == nil {
-			aBall = ps
-		}
-	}
-	
-	func didFail(error: Error) {
-		NSLog("Failed disconvering ball: \(error)")
-		self.infoButton.setTitle("Failed. \(error)", for: UIControl.State.normal)
-	}
-	
-	func oadMode(sensor: Sensor) {
-	}
 }
