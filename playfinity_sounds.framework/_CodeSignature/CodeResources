@@ -6,7 +6,11 @@
 	<dict>
 		<key>Headers/playfinity_sounds-Swift.h</key>
 		<data>
+<<<<<<< HEAD
 		CkGWovKDtS1xroD7fyfTCf/gczs=
+=======
+		PAynJoNfs5RzGGozNu+BLjcZ5EY=
+>>>>>>> next_release
 		</data>
 		<key>Headers/playfinity_sounds.h</key>
 		<data>
@@ -14,7 +18,11 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
+<<<<<<< HEAD
 		eDWwAayhuh3RHJD8HuOgwYPqmyE=
+=======
+		i6zHSGHfZNkrhcrhnKL0E/zdV8Q=
+>>>>>>> next_release
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -22,6 +30,7 @@
 		</data>
 		<key>Modules/playfinity_sounds.swiftmodule/arm.swiftdoc</key>
 		<data>
+<<<<<<< HEAD
 		jTVJocu2vCzo/i1rARBzixee54s=
 		</data>
 		<key>Modules/playfinity_sounds.swiftmodule/arm.swiftmodule</key>
@@ -35,6 +44,21 @@
 		<key>Modules/playfinity_sounds.swiftmodule/arm64.swiftmodule</key>
 		<data>
 		bZqHn+UwM/Z9cuBQYSPoX3gHRbg=
+=======
+		cXTinb1H+QlEGtXJkIvm4WKAoJ8=
+		</data>
+		<key>Modules/playfinity_sounds.swiftmodule/arm.swiftmodule</key>
+		<data>
+		7yvJzrZLwpoo1XeAYOFW253VEiI=
+		</data>
+		<key>Modules/playfinity_sounds.swiftmodule/arm64.swiftdoc</key>
+		<data>
+		iD4jquryF2KzC7RQXQ4/1WrsCMQ=
+		</data>
+		<key>Modules/playfinity_sounds.swiftmodule/arm64.swiftmodule</key>
+		<data>
+		bV6chU2L78Fpb+d9SpwD52QNEwg=
+>>>>>>> next_release
 		</data>
 	</dict>
 	<key>files2</key>
@@ -43,11 +67,19 @@
 		<dict>
 			<key>hash</key>
 			<data>
+<<<<<<< HEAD
 			CkGWovKDtS1xroD7fyfTCf/gczs=
 			</data>
 			<key>hash2</key>
 			<data>
 			cXafsySko/Hg5oYSx6CctsIq0loLna5JJoOr++BpTTw=
+=======
+			PAynJoNfs5RzGGozNu+BLjcZ5EY=
+			</data>
+			<key>hash2</key>
+			<data>
+			M20CoxXW64nQIVb64VFIafCGpm5H/nFhaIIy3FAlPOo=
+>>>>>>> next_release
 			</data>
 		</dict>
 		<key>Headers/playfinity_sounds.h</key>
@@ -76,44 +108,76 @@
 		<dict>
 			<key>hash</key>
 			<data>
+<<<<<<< HEAD
 			jTVJocu2vCzo/i1rARBzixee54s=
 			</data>
 			<key>hash2</key>
 			<data>
 			cSPGeH5OA70cOR6QbvL7lXCEHj8P79iFnd2CnnATeF8=
+=======
+			cXTinb1H+QlEGtXJkIvm4WKAoJ8=
+			</data>
+			<key>hash2</key>
+			<data>
+			lK5kc9Gn5MpJRS9ZPKs+I2AX9N8U1fzrnjk+JECcI3E=
+>>>>>>> next_release
 			</data>
 		</dict>
 		<key>Modules/playfinity_sounds.swiftmodule/arm.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
+<<<<<<< HEAD
 			opsWY0jVXi0QBcCpVvUPu6NyZbo=
 			</data>
 			<key>hash2</key>
 			<data>
 			p/lRhnB544MgEqBOFJ37H5se+eYZA7sju17Tzb87fmI=
+=======
+			7yvJzrZLwpoo1XeAYOFW253VEiI=
+			</data>
+			<key>hash2</key>
+			<data>
+			hNaBfGBpokBHBzD8AKsG0F1hTRnO6zdPZUWiGSEnOCA=
+>>>>>>> next_release
 			</data>
 		</dict>
 		<key>Modules/playfinity_sounds.swiftmodule/arm64.swiftdoc</key>
 		<dict>
 			<key>hash</key>
 			<data>
+<<<<<<< HEAD
 			lHSBHDL/Cq8CCR0abba0+o7WN6s=
 			</data>
 			<key>hash2</key>
 			<data>
 			jIIjqASrYAG2pu3hl1scRS6Ecz/yQ6vfd93Z3wmfaUw=
+=======
+			iD4jquryF2KzC7RQXQ4/1WrsCMQ=
+			</data>
+			<key>hash2</key>
+			<data>
+			kuwtaLS9AGIhKuzw65hnDFEpj81au1gDFfDmIjFUhvw=
+>>>>>>> next_release
 			</data>
 		</dict>
 		<key>Modules/playfinity_sounds.swiftmodule/arm64.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
+<<<<<<< HEAD
 			bZqHn+UwM/Z9cuBQYSPoX3gHRbg=
 			</data>
 			<key>hash2</key>
 			<data>
 			V5slImPPdY3r9KDU4DPWSrYnU1tqgyugzv+36bVHEmA=
+=======
+			bV6chU2L78Fpb+d9SpwD52QNEwg=
+			</data>
+			<key>hash2</key>
+			<data>
+			ku9V/5RA/PqyILgc02HzWa++7tNdjX/+ongGRs4ayx4=
+>>>>>>> next_release
 			</data>
 		</dict>
 	</dict>
