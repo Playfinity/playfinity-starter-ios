@@ -20,10 +20,7 @@
 #import "TIBroadcastData.h"
 #import "oad.h"
 #import "AHRSAlgo.h"//! Project version number for playfinity_sdk.
-<<<<<<< HEAD
-=======
 
->>>>>>> next_release
 FOUNDATION_EXPORT double playfinity_sdkVersionNumber;
 
 //! Project version string for playfinity_sdk.
