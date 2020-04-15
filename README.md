@@ -1,133 +1,201 @@
-# Playfinity
+# Playfinity SDK iOS Sample 
 
-The Playfinity Team is thanking you for trying out the Playfinity SDK!
+This sample application is here to help customers get up and running with Playfinity SDK on iOS.
 
-If you are new to Playfinity, check out our products at https://playfinity.io
+-------
 
-At Playfinity, we make:
+<p align="center">
+    <a href="https://playfinity.io/">Playfinity.io</a>
+    :heavy_check_mark:
+    <a href="https://www.facebook.com/playfinity.io/">Facebook</a>
+    :heavy_check_mark:
+    <a href="https://www.instagram.com/playfinity_io/">Instagram</a>
+    :heavy_check_mark:
+    <a href="https://www.youtube.com/channel/UCiJSGEIcw_-OHlYjTOeJ-Ag/featured/">Youtube</a>
+</p>
 
-- our own game console (sensor chip) that can be put into various things
-- a throwing ball (Ø 10 cm), a PU ball that you can put the game console inside
-- games built on our own SDK, for iOS and Android:
-  - High5 ball throwing app
-  - Trix football freestyle app
-  - Trampoline app where you put the game console in your pocket
+-------
 
-Check out videos on our [website](https://playfinity.io) to see in-action footage.
+### What's included :rocket:
+- PlayfinityKit SDK FAT(x86 and arm) and release(arm)
+- PlayfinityKit console discovering and pairing (BLE)
+- Listening and reacting to console events
+- Sounds
+- Ball throwing sample
+- Trampoline jumping sample
+- Trick ball sample
+- Cloud transporter
+- Coded in Swift
 
-## The SDK
+# Preview
 
-The Playfinity SDK lets you as developer create apps or games on the Playfinity platform (just as we have created our apps on the same SDK).
+## Screenshots 
 
-When you write your app, you define in which mode you shall use the console:
+![Image](https://github.com/Playfinity/playfinity-starter-ios/blob/public/screenshot.PNG?raw=true)
 
-- Throwing ball
-- Freestyle football
-- Trampoline
+Sample app screenshot with successfully connected SDK and Playfinity Console (real device photo)
 
-```swift
-// Register at labs@playfinity.io
-let devId = "SAMPLE_TEST"
-let appId = "SAMPLE_TEST"
+# How to use
 
-let conf = PFIConfiguration.init(applicationKey: appId, developerId: devId, sensorType: SensorType.ball)
+## Requirements 
+
+PlayfinityKit targets iOS 11 and newer.
+
+## Setup
+
+`Info.plist`
+
+```xml
+<key>CLOUD_API_URL</key>
+<string>https: //cloud.playfinity.io/</string>
 ```
 
-You can also subscribe to raw data to receive un-touched data from the console at 50 samples per second.
-```swift
-sdk.connect(to: console, completion: { (error) in
-	if let e = error {
-		print("ERROR: Failed to connect: \(e)")
-    return
-	} 
-  if let c = console {
-		print("Connected")
-    c.setPureDataSubscriber(sub: self, code: "451C5EA6-4AD7-4B4A-BA23-4EF34AA7B392")
-	}
-})
+Drag and drop `PlayfinityKit.framework` into your project. 
+There are `universal/PlayfinityKit.framework` that contains symbols required by iOS simulator
+There are `release/PlayfinityKit.framework`  use this one for Appstore uploads. 
 
+## Console mode
+
+Playfinity Console can operate in a several different modes. For example it can act like a ball or a trampoline ankle band.<br>
+While initialising Playfinity SDK we can choose what mode to use:
+
+```swift
+let config = Configuration.init(applicationKey: "SAMPLE_TEST", developerId: "SAMPLE_TEST", sensorType: SensorType.ball)
+PlayfinityKit.validate(configuration: config) { [weak self] (result) in
+    guard  let  self = self  else { return }
+    switch result {
+        case .success(let sdk):
+            ()
+        case .failure(let error):
+            ()
+        }
+}
+```
+After config validation you are able to add 
+```swift
+public  protocol  SensorObserver : AnyObject {
+    func playfinityKit(_ playfinityKit: PlayfinityKit.PlayfinityKit, didFoundSensor sensor: PlayfinityKit.Sensor)
+    func playfinityKit(_ playfinityKit: PlayfinityKit.PlayfinityKit, lowBatteryOn sensor: PlayfinityKit.Sensor)
+    func playfinityKit(_ playfinityKit: PlayfinityKit.PlayfinityKit, didGetEvent event: PlayfinityKit.BallEvent, onSensor sensor: PlayfinityKit.Sensor)
+    func playfinityKit(_ playfinityKit: PlayfinityKit.PlayfinityKit, didGetEvent event: PlayfinityKit.TrampolineEvent, onSensor sensor: PlayfinityKit.Sensor)
+    func playfinityKit(_ playfinityKit: PlayfinityKit.PlayfinityKit, didGetEvent event: PlayfinityKit.FootballEvent, onSensor sensor: PlayfinityKit.Sensor)
+}
 ```
 
-Raw data is:
-- gyro x-y-z
-- accel x-y-z
-- compass x-y-z (soon)
-- baro
-- console clock (ticks)
-- events (subset of events)
+After config validation you are able to use `public  func  addObserver(_ observer: PlayfinityKit.SensorObserver)`
+from:
+```swift
+public  class  PlayfinityKit {
+    public static func validate(configuration: PlayfinityKit.Configuration, completion: @escaping (Result<PlayfinityKit.PlayfinityKit, Error>) -> ())
+    public  func  scan()
+    public  func  stopScan()
+    public  func  addObserver(_ observer: PlayfinityKit.SensorObserver)
+    public  func  removeObserver(_ observer: PlayfinityKit.SensorObserver)
+}
+```
 
-## Ball events
+## Available Sensor Types
 
-We have worked really hard to make your job as simple as possible.
+### 1. `ball`
+Will Produce:
+```swift
+public  enum  BallEvent {
+//speed in km/h
+case throwEvent(speed: Double)
+//airTime in milis, height in cm
+case catchEvent(airTime: Double, height: Double)
+//airTime in milis, height in cm
+case missEvent(airTime: Double, height: Double)
+//airTime in milis, height in cm
+case bounceEvent(airTime: Double, height: Double)
+case  buttonPressEvent
+}
+```
 
-It all started with a ball you can throw. We have spent "tons" of hours recording data, analyzing them and implementing algorithms to detect events such as:
+### 2. `trampoline`
 
-- ball throw
-- ball catch
-- ball bounce
-- ball miss
-- ball flight air-time
-- ball height
-- ball speed
+Will Produce:
+```swift
+public enum TrampolineEvent {
+    case jumpEvent
+    //yawRotation and pitchRotation in degrees
+    case landFeetEvent(yawRotation: Double, pitchRotation: Double)
+    case buttonPressEvent
+}
+```
 
-We have also created events for trampoline:
+### 3. `football`
+Will Produce:
+```swift
+public enum FootballEvent {
+    //speed in km/h
+    case kickEvent(speed: Double)
+    case missEvent
+    case bounceEvent
+    case buttonPressEvent
+}
+```
 
-- jump
-- land on feet. We shall add land on back and land on front.
-- events have attached properties such as
-  - jump height
-  - jump rotation in degrees
+## Cloud Transponder :cloud:
+Playfinity Cloud Transponder enables an option to send console events to a specified endpoint in real time.<br>
+To toggle it, you need to add `Settings.bundle` to your project.
 
-And we have created events for freestyle football:
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>StringsTable</key>
+    <string>Root</string>
+    <key>PreferenceSpecifiers</key>
+    <array>
+        <dict>
+            <key>Type</key>
+            <string>PSToggleSwitchSpecifier</string>
+            <key>Title</key>
+            <string>playfinity_cloud</string>
+            <key>Key</key>
+            <string>cloud_enabled</string>
+            <key>DefaultValue</key>
+            <false/>
+        </dict>
+    </array>
+</dict>
+</plist>
+```
 
-- ball kick
-- ball bounce
-- ball miss
-- ball flight air-time
-- ball height
+Or change it calling directly `UserDefaults.standard.set(true, forKey: "cloud_enabled")`
 
-In addition we have two push buttons that produce:
+To change endpoint url replace in `Info.plist`
 
-- top button
-- top button release
-- side button
-- side button release
+```xml
+<key>CLOUD_API_URL</key>
+<string>https://cloud.playfinity.io/</string>
+```
 
-All of this is available to you. You can focus on the game experience.
+with your own URL.
 
-## Discovering the console
+Request sent by app will look like:
 
-All complexity has been hidden.
+`curl -H 'Host: X' -H 'appId: SAMPLE_TEST' -H 'Accept: */*' -H 'playerId: SAMPLE_TEST' -H 'appVersion: 1.0.0' -H 'Accept-Language: pl-pl' -H 'platform: iOS' -H 'Cache-Control: no-cache' -H 'User-Agent: PlayfinityKitExample/1 CFNetwork/1121.2.2 Darwin/19.3.0' -H 'phoneId: X' -H 'Content-Type: application/json; charset=utf-8' --data-binary '{"events":[{"event":"buttonTop","airtime":0,"speed":0,"height":0,"at":"2020-04-15T08:34:52.395Z","from":"-","key":"buttonTop_1_127","flip":0,"by":"D4FF202E36D5@151BD5E69094","md5":"1191f1ca51b103ce41072309f9266533","rotation":0,"action":127}]}' --compressed 'CLOUD_API_URL/event'`
 
-The console pairs simply by bringing it close to the phone. Maybe you need to press the button on the console to wake it, but that's it.
+where `event` can be:
 
-## Nice to know
+`buttonTop, thrown, caught, landFeet, jump, bounce, miss`
 
-The sample app is equipped with a "test" developer- and app-identifier.
-So you can download from this repository, modify and run your app on any of your devices.
 
-If you change the bundle identifier, you must register at Playfinity, since the "test" values for app and dev belongs to the bundle identifier shipped in this sample app.
+# License
 
-### Register if you deploy to AppStore
+    Copyright 2020 Playfinity.io
 
-It means that when you want to upload to the App Store, you will need to register the app with Playfinity servers first.
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
 
-When you register, you receive your own "APP_ID" and "DEV_ID".
+       http://www.apache.org/licenses/LICENSE-2.0
 
-Since we do not yet have a Developer Portal, you must register manually by writing to us at labs@playfinity.io
-
-Provide the following information:
-- Name
-- Address
-- Contact phone
-- Contact e-mail
-- App name
-- App bundle identifier
-
-### Internet and offline functionality
-
-The framework needs Internet to validate with Playfinity servers.
-
-After a validation, it will work offline for one week until new validation is required.
-
-The same is for pairing a console. First time pairing requires Internet for validating the console, and thereafter you can be offline for one week before next validation is required.
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.

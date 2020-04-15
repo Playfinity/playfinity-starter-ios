@@ -1,0 +1,3 @@
+module PlayfinityPriv {
+  export *
+}

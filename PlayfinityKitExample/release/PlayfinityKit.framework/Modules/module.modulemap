@@ -1,0 +1,11 @@
+framework module PlayfinityKit {
+  umbrella header "PlayfinityKit.h"
+
+  export *
+  module * { export * }
+}
+
+module PlayfinityKit.Swift {
+    header "PlayfinityKit-Swift.h"
+    requires objc
+}

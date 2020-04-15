@@ -1,4 +1,0 @@
-framework module Unbox {
-  header "Unbox-Swift.h"
-  requires objc
-}
