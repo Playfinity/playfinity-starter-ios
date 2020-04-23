@@ -2,6 +2,8 @@
 
 This sample application is here to help customers get up and running with Playfinity SDK on iOS.
 
+The Playfinity SDK communicates with playOS on the Playfinity console.
+
 -------
 
 <p align="center">
